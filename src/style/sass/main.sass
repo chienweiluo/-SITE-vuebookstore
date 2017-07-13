@@ -1,0 +1,93 @@
+@import "../../../node_modules/compass-mixins/lib/compass/css3"
+@import "dist/css/bootstrap.min.css"
+
+@mixin clearfix()
+  *zoom: 1
+  &:after
+    display: table
+    content: ""
+    line-height: 0
+    clear: both
+
+*
+  &, &:after, &:before
+    vertical-align: top
+    @include box-sizing(border-box)
+
+html
+  min-height: 100%
+
+  body
+    position: relative
+    display: inline-block
+    text-align: center
+    margin: 0
+    width: 100%
+    min-height: 100%
+    font-size: medium
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif, "Microsoft JhengHei"
+    background: white
+    color: rgba(50, 50, 50, 0.8)
+
+.fixed-top
+  position: fixed
+  width: 100%
+
+.navbar
+  position: fixed
+  z-index: 999
+
+.navbar-brand
+  display: inline-block
+  width: 100%
+  background-color: #337ab7
+  >div,span
+    display: inline-block
+
+  .navbar-toggler-left
+    position: relative
+
+  .navbar-toggler-right
+    position: relative
+    float: left
+    left: 0
+    top: 0
+    text-align: center
+
+  span
+    float: right
+    div
+      display: inline-block
+      position: relative
+      top: -5px
+      button
+        background-color: royalblue
+        border-color: #337a87
+.fixed-area
+  bottom: 0
+  left: 0
+  position: fixed
+  background-color: royalblue
+  padding-right: 3px
+  color: white
+  @include border-radius(1px)
+  @include box-shadow(1px 1px)
+
+.container
+  padding: 55px
+
+#bookDetail
+  margin-top: 10px
+  @include box-shadow(0 1px 2px rgba(0, 0, 0, .5))
+  border: 1px solid #ddd
+  @include border-radius(4.5px 4.5px 0 0)
+
+.card-header
+  @include clearfix()
+
+.float-right
+  float: right
+  button
+    margin: 0 5px 0 0
+.float-left
+  float: left
