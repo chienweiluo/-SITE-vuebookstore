@@ -10,4 +10,6 @@
 
 使用Vue, Bootstrap, webpack, compass
 
+<img src="https://media.giphy.com/media/Hn9NmyoQBNxWE/giphy.gif">
+
 參考: kinanson大大的筆記
